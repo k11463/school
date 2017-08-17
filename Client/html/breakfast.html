@@ -1,0 +1,26 @@
+<form>
+    <fieldset>
+        <legend>
+            <input type="radio" id="brk_ch" value="0" name="brk" checked>中式
+            <input type="radio" id="brk_en" value="1" name="brk">西式
+            <input type="radio" id="brk_fr" value="2" name="brk">法式
+        </legend>
+        <select id="brk_select">
+            <option value="1">123</option>
+        </select>
+        單價:<input type="text" size="4" id="price" readonly>
+        數量:<input type="text" size="4" value="1" id="count" pattern="[1-9][0-9]*">
+        小計:<input type="text" size="4" id="total01" readonly>
+    </fieldset>
+</form>
+<form>
+    <fieldset>
+        <legend>
+            <input type="checkbox" id="soto" value="5">外帶
+            <input type="checkbox" id="plus" value="20">加量
+        </legend>
+        環保袋:<input type="text" size="4" id="" readonly>
+        加量:百分之<input type="text" size="4" id="" readonly>$
+        總計:<input type="text" size="4" id="" readonly>
+    </fieldset>
+</form>

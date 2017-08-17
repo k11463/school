@@ -1,0 +1,34 @@
+<h1 id="title">Ajax 首測001--核心功能</h1>
+<form id="payment" name="payment">
+    <input type="text" id="msg" name="msg" placeholder="請輸入訊息..."> <br>
+    <input type="text" id="firstName" name="firstName" placeholder="請輸入您的名字!"> <br>
+    <input type="text" id="shortMsg" name="shortMsg" placeholder="server回傳的字串!"> <br>
+    
+    <input type="radio" id="ch" name="lang" value="0" checked> 中文
+    <input type="radio" id="en" name="lang" value="1"> 英文
+    <input type="radio" id="fr" name="lang" value="2"> 法文 <br>
+    
+    <input type="radio" id="taipei" name="city" value="0" checked> 台北
+    <input type="radio" id="miaoli" name="city" value="1"> 苗栗
+    <input type="radio" id="taichung" name="city" value="2"> 台中 <br>
+    
+    <input type="checkbox" id="reading" name="interest" value="0"> 閱讀
+    <input type="checkbox" id="baseball" name="interest" value="1"> 棒球
+    <input type="checkbox" id="game" name="interest" value="2"> 電玩 <br>
+    
+    <select id="rank"> <!-- multiple 讓下拉式選單變成可以多選的 -->
+        <option value="A">第一名</option>
+        <option value="B">第二名</option>
+        <option value="C">第三名</option>
+    </select>
+    
+    <br>
+    
+    <textarea name="serverMsg" id="serverMsg"></textarea> <br>
+    
+    <input type="button" id="ajaxGo" name="ajaxGo" value="Ajax 送出">
+    <input type="button" id="chgtitle" value="改標題">
+    <input type="button" id="addopt" value="增加下拉選項">
+    <input type="button" id="delopt" value="刪除選取選項">
+    <input type="button" id="delallopt" value="刪除所有選項">
+</form>

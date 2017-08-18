@@ -1,28 +1,46 @@
 function chgopt(){
     $("#brk_select option").remove();
     var a = $("input[name=brk]:checked").val();
-    console.log(a);
     for(var i = 0; i < opt[a].length; i++){
         $("#brk_select").append("<option value='" + opt[a][i].price + "'>" + opt[a][i].name + "</option>");
     }
     chgipt();
 }
 
-
-
 function chgipt(){
     var a = $("#brk_select option:selected").val();
     var b = $("#count").val();
     $("#price").val(a);
     $("#total01").val(a * b);
+    var c = a * b;
+    c_alltotal();
+}
+
+function chgbox(){
+  var a = $("#soto").prop("checked");
+  var b = $("#plus").prop("checked");
+  var total = 0;
+  var a_true = a ? $("#soto").val() : 0;
+  var b_true = b ? $("#plus").val() : 0;
+  $("#bag").val(a_true);
+  $("#pp").val(b_true);
+  c_alltotal();
+}
+
+function c_alltotal(){
+  var a = $("#pp").val()/100 + 1;
+  var total = ($("#total01").val()*1 + $("#bag").val()*1) * a;
+  $("#alltotal").val(total);
 }
 
 function core_breakfast(){
+    $("#alltotal").val(alltotal);
     chgopt();
     chgipt();
-    $("input").on("change", chgopt);
+    $("input[type=radio]").on("change", chgopt);
     $("#brk_select").on("change", chgipt);
     $("#count").on("change", chgipt);
+    $("input[type=checkbox]").on("change", chgbox);
 }
 
 var opt = [
@@ -39,7 +57,7 @@ var opt = [
             "name": "豆漿",
             "price": 12
         }
-            
+
     ],
     [
         {

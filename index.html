@@ -5,16 +5,26 @@
         <title>首頁</title>
         <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/ui-darkness/jquery-ui.css">
         <link rel="stylesheet" href="Client/css/index.css">
+        <style>
+            *{
+                user-select: none;
+            }
+            input{
+                cursor: pointer;
+            }
+        </style>
     </head>
-    <body onload="start()">
+    <body>
         <div id="tabs">
             <ul>
                 <li> <a href="#core">基本表單元件Ajax</a> </li>
                 <li> <a href="#breakfast" id="li2">早餐點餐系統</a> </li>
+                <li> <a href="#aaaaaa">不知名</a> </li>
             </ul>
 
             <div id="core"></div>
             <div id="breakfast"></div>
+            <div id="aaaaaa"></div>
         </div>
     </body>
     
@@ -22,10 +32,6 @@
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
     <script src="Client/js/core.js"></script>
     <script src="Client/js/breakfast.js"></script>
+    <script src="Client/js/aaaaaa.js"></script>
     <script src="Client/js/index.js"></script>
-    <script>
-        function start(){
-            $("#li2").click();
-        }
-    </script>
 </html>

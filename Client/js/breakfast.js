@@ -34,13 +34,12 @@ function c_alltotal(){
 }
 
 function core_breakfast(){
-    $("#alltotal").val(alltotal);
     chgopt();
     chgipt();
-    $("input[type=radio]").on("change", chgopt);
+    $("input[name=brk]").on("change", chgopt);
     $("#brk_select").on("change", chgipt);
     $("#count").on("change", chgipt);
-    $("input[type=checkbox]").on("change", chgbox);
+    $("input[name=brk_check]").on("change", chgbox);
 }
 
 var opt = [

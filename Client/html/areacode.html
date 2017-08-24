@@ -1,0 +1,20 @@
+<form id="area">
+    <fieldset>
+        <legend>
+            縣市：<select id="city"></select>
+            鄉鎮：<select id="country"></select>
+            <input type="text" id="street" size="40" placeholder="街道、巷弄、門牌號碼">
+            <input type="button" name="get_address" value="產生地址">
+        </legend>
+        <textarea name="address" id="address" cols="62" rows="1" disabled></textarea>
+        <br>
+    </fieldset>
+    <fieldset>
+        <legend>
+            <input type="radio" id="slow" name="speed" value="5" checked> 平信 (5元)
+            <input type="radio" id="fast" name="speed" value="10"> 限時 (10元)
+            <input type="checkbox" id="safe" name="speed" value="18"> 掛號 (+18元)
+        </legend>
+        郵資：<input type="text" size="6" id="mailgold" name="mailgold" value="5" disabled>
+    </fieldset>
+</form>

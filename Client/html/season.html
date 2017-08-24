@@ -1,0 +1,29 @@
+<form>
+    <fieldset>
+        <legend>
+            <input type="radio" id="haru" value="0" name="sea" checked>春季
+            <input type="radio" id="natu" value="1" name="sea">夏季
+            <input type="radio" id="aki" value="2" name="sea">秋季
+            <input type="radio" id="fuyu" value="3" name="sea">冬季
+        </legend>
+        <select id="sea_select">
+            <option value="1">123</option>
+        </select>&nbsp;&nbsp;&nbsp;&nbsp;
+        單價：<input type="text" size="4" id="price1" readonly>  &nbsp;&nbsp;&nbsp;&nbsp;
+        數量：<input type="text" size="4" value="1" id="count1" pattern="[1-9][0-9]*">  &nbsp;&nbsp;&nbsp;&nbsp;
+        小計：<input type="text" size="4" id="total01_1" readonly>  &nbsp;&nbsp;&nbsp;&nbsp;
+        贈送數量(買三送一)：<input type="text" size="4" id="oku" readonly>
+    </fieldset>
+</form>
+<br>
+<form>
+    <fieldset>
+        <legend>
+            <input type="checkbox" id="soto1" value="5">購物袋
+            <input type="checkbox" id="plus1" value="5">營業稅
+        </legend>
+        購物袋：<input type="text" size="4" name="sea_check" id="bag1" value="0" readonly>元  &nbsp;&nbsp;&nbsp;&nbsp;
+        營業稅：<input type="text" size="4" name="sea_check" id="pp1" value="0" readonly>%  &nbsp;&nbsp;&nbsp;&nbsp;
+        總計：<input type="text" size="4" id="alltotal1" readonly>
+    </fieldset>
+</form>

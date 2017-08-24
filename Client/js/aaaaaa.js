@@ -1,3 +1,0 @@
-function core_aaaaaa(){
-    
-}

@@ -45,8 +45,8 @@ function get_address(){
 
 function chg_city(){
     var a = $("#city option:checked");
+    $("#country option").remove();
     get_country(a[0].value);
-    console.log(a[0].value);
 }
 
 function get_country(val){
@@ -73,14 +73,29 @@ function show_country(id){
         var opt = new Option ( res_cut[0], res_cut[1] );
         $("#country").append(opt);
     }
+    chg_address();
 }
 
-function core_areacode(){
+function chg_address(){
+    var country_code = $("#country option:checked").val();
+    //console.log(country_code);
+    var street = $("#street").val();
+    var city = $("#city option:checked").text();
+    var country = $("#country option:checked").text();
+    var add_msg = " 《" + country_code + "》 " + city + country + street;
+    $("#address").val(add_msg);
+    $("#address").val($("#address").val().replace("\n", ""));
+}
+
+function core_areacode(){    
     $("input[name=speed]").on("change", chg_mailgold);
     $("input[type=button]").button();
     $("input[type=button]").css({
         "font-family": "'Noto Sans TC', sans-serif"
     });
+    get_country(100);
     get_address();
     $("#city").on("change", chg_city);
+    $("#country").on("change", chg_address);
+    $("#get_address").on("click", chg_address);
 }
